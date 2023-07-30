@@ -139,6 +139,7 @@ padding: 0;
   background-color: #6a1b9a;
 }
 .collection-item span{
+  max-width: 240px;
   display: inline-block;
   text-overflow: ellipsis;
    white-space: nowrap;
