@@ -145,14 +145,14 @@ collection-item {
     justify-content: space-between;
 }
 
-.collection-item.name{
+.collection-item .name{
   max-width: 270px;
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.collection-item.counter{
+.collection-item .counter{
     display: flex;
     column-gap: 5px;
     margin-right: 10px;
