@@ -37,7 +37,16 @@ function BasketList(props) {
                 style={{ backgroundColor: '#6a1b9a' }}
             >
                 Общая стоимость: <b>{totalPrice}</b> руб.
-                <button className='btn-order btn purple lighten-1'>
+                <button
+                    className='btn-order btn purple lighten-1'
+                    onClick={() => {
+                        if (totalPrice > 0) {
+                            alert('Спасибо! Ваш заказ принят!');
+                        } else {
+                            alert('Добавьте товар в корзину');
+                        }
+                    }}
+                >
                     Оформить заказ
                 </button>
             </li>
