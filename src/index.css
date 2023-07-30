@@ -144,20 +144,37 @@ padding: 0;
     align-items: center;
     justify-content: space-between;
 }
+.collection-item.active {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .collection-item .name{
-  max-width: 270px;
-  display: inline-block;
+  max-width: 265px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.collection-item .price .counter{
-    display: flex;
-    column-gap: 5px;
-    margin-right: 10px;
-    border: 1px solid #6a1b9a;
-    border-radius: 4px;
-    padding: 0 5px;
+.collection-item .price {
+  min-width: 200px;
+  display: flex;
+  margin-left: 0;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.collection-item .price .counter{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 80px;  
+  margin-right: 10px;
+  border: 1px solid #6a1b9a;
+  border-radius: 4px;
+  padding: 0 5px;
+}
+
+
+
     

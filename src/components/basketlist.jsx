@@ -36,19 +36,27 @@ function BasketList(props) {
                 className='collection-item active'
                 style={{ backgroundColor: '#6a1b9a' }}
             >
-                Общая стоимость: <b>{totalPrice}</b> руб.
-                <button
-                    className='btn-order btn purple lighten-1'
-                    onClick={() => {
-                        if (totalPrice > 0) {
-                            alert('Спасибо! Ваш заказ принят!');
-                        } else {
-                            alert('Добавьте товар в корзину');
-                        }
-                    }}
-                >
-                    Оформить заказ
-                </button>
+                <div>Общая стоимость:</div>
+                <div>
+                    <b>{totalPrice}</b> руб.
+                    <button
+                        style={{
+                            display: 'inline-block',
+                            position: 'static',
+                            marginLeft: '10px',
+                        }}
+                        className='btn-order btn purple lighten-1'
+                        onClick={() => {
+                            if (totalPrice > 0) {
+                                alert('Спасибо! Ваш заказ принят!');
+                            } else {
+                                alert('Добавьте товар в корзину');
+                            }
+                        }}
+                    >
+                        Оформить заказ
+                    </button>
+                </div>
             </li>
             <i
                 className='material-icons basket-close'

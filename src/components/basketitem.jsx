@@ -16,12 +16,16 @@ function BasketItem(props) {
                 <div className='counter'>
                     <i
                         className='material-icons basket-quantity'
-                        onClick={() => minusQuantity(mainId)}
+                        onClick={() => {
+                            minusQuantity(mainId);
+                            if (quantity === 0) removeFromBasket(mainId);
+                        }}
                     >
                         {' '}
                         remove
                     </i>
-                    {'  '}x{quantity}
+                    {'  '}
+                    {quantity > 0 ? quantity : removeFromBasket(mainId)}
                     {'  '}
                     <i
                         className='material-icons basket-quantity'
@@ -30,20 +34,22 @@ function BasketItem(props) {
                         add
                     </i>
                 </div>
-                <b>{price.regularPrice * quantity}</b> руб.
-                <span
-                    className='secondary-content'
-                    onClick={() => {
-                        removeFromBasket(mainId);
-                    }}
-                >
-                    <i
-                        className='material-icons basket-delete'
-                        style={{ color: '#6a1b9a' }}
+                <div className='sum-price'>
+                    <b>{price.regularPrice * quantity}</b> руб.
+                    <span
+                        className='secondary-content'
+                        onClick={() => {
+                            removeFromBasket(mainId);
+                        }}
                     >
-                        close
-                    </i>
-                </span>
+                        <i
+                            className='material-icons basket-delete'
+                            style={{ color: '#6a1b9a' }}
+                        >
+                            close
+                        </i>
+                    </span>
+                </div>
             </div>
         </li>
     );
