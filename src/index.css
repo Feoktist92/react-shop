@@ -139,10 +139,10 @@ padding: 0;
   background-color: #6a1b9a;
 }
 
-collection-item {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
+.collection-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .collection-item .name{
