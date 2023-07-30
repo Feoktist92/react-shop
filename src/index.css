@@ -139,9 +139,15 @@ padding: 0;
   background-color: #6a1b9a;
 }
 .collection-item span{
+  display: flex;
   max-width: 240px;
   display: inline-block;
   text-overflow: ellipsis;
-   white-space: nowrap;
-   overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.collection-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
