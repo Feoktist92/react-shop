@@ -140,9 +140,9 @@ padding: 0;
 }
 
 collection-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
 }
 
 .collection-item .name{
@@ -152,7 +152,7 @@ collection-item {
   white-space: nowrap;
   overflow: hidden;
 }
-.collection-item .counter{
+.collection-item .price .counter{
     display: flex;
     column-gap: 5px;
     margin-right: 10px;
