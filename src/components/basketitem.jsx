@@ -10,7 +10,7 @@ function BasketItem(props) {
     } = props;
     return (
         <li className='collection-item'>
-            {displayName}
+            <span>{displayName}</span>
             <i
                 className='material-icons basket-quantity'
                 onClick={() => minusQuantity(mainId)}

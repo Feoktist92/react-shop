@@ -138,7 +138,7 @@ padding: 0;
 .toast{
   background-color: #6a1b9a;
 }
-.collection-item {
+.collection-item span{
   text-overflow: ellipsis !important;
    white-space: nowrap !important; 
    overflow: hidden !important;
