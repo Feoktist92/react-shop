@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav {
+  padding: 0 15px;
+}
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 15px 0;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+  gap: 15px;
+}
+
+
+.page-footer {
+padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-title {
+  text-align: center;
+  margin-bottom: 90px;
+  text-transform: capitalize;
+}
+
+.cart {
+  position:fixed;
+  padding: 10px;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.cart:hover {
+  opacity: 0.7;
+}
+
+@media (min-width: 767px) {
+  .cart{
+    top:70px;
+    bottom: initial;
+  } 
+}
+.basket-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 500px;
+  max-width: 90%;
+  animation: show 300ms ease-in-out;
+}
+
+.basket-close {
+  position: absolute;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.basket-delete {
+  cursor: pointer;
+}
+
+@keyframes show {
+  from {
+    top: 70%;
+    opacity: 0;
+  } to {
+    top:50%;
+    opacity: 1;
+  }
+}
+
+.basket-quantity {
+  cursor: pointer;
+  vertical-align:middle;
+  color: #6a1b9a;
+}
+
+.collection-item.active {
+  background-color: #6a1b9a;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn-order {
+  position: absolute;
+  bottom: 3.5px;
+  right: 3px;
+}
+
+#toast-container {
+ top: 25px !important;
+ animation: fade-in 250ms ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.toast{
+  background-color: #6a1b9a;
+}
+.collection-item {
+  text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+}
