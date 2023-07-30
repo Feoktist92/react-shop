@@ -139,7 +139,8 @@ padding: 0;
   background-color: #6a1b9a;
 }
 .collection-item span{
-  text-overflow: ellipsis !important;
-   white-space: nowrap !important; 
-   overflow: hidden !important;
+  display: inline-block;
+  text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
 }
