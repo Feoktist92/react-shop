@@ -138,11 +138,26 @@ padding: 0;
 .toast{
   background-color: #6a1b9a;
 }
-.collection-item span{
+
+collection-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collection-item.name{
   max-width: 270px;
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  vertical-align: middle;
 }
+.collection-item.counter{
+    display: flex;
+    column-gap: 5px;
+    margin-right: 10px;
+    border: 1px solid #6a1b9a;
+    border-radius: 4px;
+    padding: 0 5px;
+}
+    
