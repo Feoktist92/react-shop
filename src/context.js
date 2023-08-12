@@ -15,7 +15,7 @@ export const ContextProvider = ({ children }) => {
     const [value, dispatch] = useReducer(reducer, inititalState);
 
     value.addToBasket = (item) => {
-        dispatch({ type: 'ADD_TO_BASKET', payload: { item } });
+        dispatch({ type: 'ADD_TO_BASKET', payload: item });
     };
     value.removeFromBasket = (itemId) => {
         dispatch({ type: 'REMOVE_FROM_BASKET', payload: { mainId: itemId } });
@@ -33,7 +33,7 @@ export const ContextProvider = ({ children }) => {
         dispatch({ type: 'TOGGLE_BASKET' });
     };
     value.setGoods = (data) => {
-        dispatch({ type: 'SET_GOODS', payload: { payload: data } });
+        dispatch({ type: 'SET_GOODS', payload: data });
     };
 
     return (

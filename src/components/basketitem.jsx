@@ -17,7 +17,7 @@ function BasketItem(props) {
                         className='material-icons basket-quantity'
                         onClick={() => {
                             minusQuantity(mainId);
-                            if (quantity === 0) removeFromBasket(mainId);
+                            if (quantity < 1) removeFromBasket(mainId);
                         }}
                     >
                         {' '}

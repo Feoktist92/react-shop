@@ -18,6 +18,7 @@ function Shop() {
             .then((response) => response.json())
             .then((data) => {
                 setGoods(data.shop);
+                console.log(data.shop);
             });
         //eslint-disable-next-line
     }, []);
